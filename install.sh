@@ -16,7 +16,7 @@ echo -ne "${WARN}"
 [ "$( dpkg -l | grep xorriso )"  = "" ] && installed_packets="${installed_packets}xorriso " && echo "xorriso nicht installiert!"
 [ "$( dpkg -l | grep git )"  = "" ] && installed_packets="${installed_packets}git " && echo "git nicht installiert!"
 echo -ne "${NORMAL}"
-if ! [-z "$installed_packets"]; then
+if ! [ -z "$installed_packets"]; then
   sudo apt update
   sudo apt -y install $installed_packets
 else
