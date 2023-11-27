@@ -1,8 +1,8 @@
 #!/bin/bash
 # Prüfe, welche Pakete installiert sind
-WARN='\[\033[1;31;40m\u@\h:\w\$ \]'
-ALL_OK='\[\033[1;32;40m\u@\h:\w\$ \]'
-NORMAL='\[\033[0;37;40m\u@\h:\w\$ \]'
+WARN='\[\033[1;31;40m'
+ALL_OK='\[\033[1;32;40m'
+NORMAL='\[\033[0;37;40m'
 installed_packets=""
 echo "Prüfe, ob Pakete installiert sind."
 echo ${WARN}
