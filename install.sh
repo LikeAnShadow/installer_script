@@ -17,10 +17,12 @@ echo -ne "${WARN}"
 [ "$( dpkg -l | grep git )"  = "" ] && installed_packets="${installed_packets}git " && echo "git nicht installiert!"
 echo -ne "${NORMAL}"
 if ! [ -z "$installed_packets" ]; then
+  sleep 5
   sudo apt update
   sudo apt -y install $installed_packets
 else
   echo -e "${ALL_OK} Alle Pakete bereits installiert! ${NORMAL}"
+  sleep 5
 fi
 git clone https://github.com/likeanshadow/oostubs_changed
 cd oostubs_changed
